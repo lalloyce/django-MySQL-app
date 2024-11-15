@@ -4,9 +4,8 @@ from django.db import models
 class Team(models.Model):
     full_name = models.CharField(max_length=100)
     designation = models.CharField(max_length=100)
+    description = models.TextField()
     avatar = models.ImageField(upload_to='media/')
-    twitter_url = models.CharField(max_length=100)
-    facebook_url = models.CharField(max_length=100)
-    instagram_url = models.CharField(max_length=100)
-    linkedin_url = models.CharField(max_length=100)
 
+    def __str__(self):
+        return f"{self.full_name} - {self.designation}"
