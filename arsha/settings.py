@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'arsha.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'arsha',
+        'USER': 'root',
+        'PASSWORD':'D#FR$GG#D',
+        'HOST': 'localhost',
+        'PORT':'3306'
     }
 }
 
